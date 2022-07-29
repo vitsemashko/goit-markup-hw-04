@@ -196,7 +196,7 @@ header {
 .envelope {
 	display: inline-block;
 	margin-right: 10px;
-	fill: var(--secondary-color);
+	fill: currentColor;
 }
 .envelope:hover,
 .envelope:focus {
@@ -204,7 +204,7 @@ header {
 }
 .smartphone {
 	margin-right: 10px;
-	fill: var(--secondary-color);
+	fill: currentColor;
 }
 .smartphone:hover,
 .smartphone:focus {
@@ -355,11 +355,8 @@ header {
 }
 .team-item {
 	width: 270px;
-	height: 368px;
 	margin: auto;
 	display: inline-block;
-	width: 270px;
-	height: 428px;
 
 	background-color: var(--bcg-color-one);
 
@@ -373,6 +370,7 @@ header {
 }
 .team-person-and-role {
 	padding-top: 30px;
+	padding-bottom: 30px;
 }
 .team-person {
 	font-style: normal;
@@ -503,11 +501,13 @@ address a:focus {
 	margin-bottom: auto;
 }
 .contacts-phone {
-	display: inline-block;
+	display: flex;
+	align-items: center;
 	margin: 0;
 }
 .contacts-mail {
-	display: inline-block;
+	display: flex;
+	align-items: center;
 }
 .team-role {
 	margin-bottom: 16px;
@@ -573,10 +573,10 @@ address a:focus {
 	height: 92px;
 	border: 1px solid var(--social-media-icon-fill-color);
 	border-radius: 2px;
+	color: var(--social-media-icon-fill-color);
 }
 .customers-icon {
-	fill: var(--social-media-icon-fill-color);
-	position: center;
+	fill: currentColor;
 	margin: 0;
 	width: 100%;
 }
@@ -584,8 +584,10 @@ address a:focus {
 .customers-icon:focus {
 	fill: var(--accent-color);
 }
-.customers-link:hover {
-	border: 1px solid var(--accent-color);
+.customers-link:hover,
+.customers-link:focus {
+	color: var(--accent-color);
+	border-color: var(--accent-color);
 }
 footer {
 	display: flex;
